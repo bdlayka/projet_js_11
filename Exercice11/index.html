@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #111111;
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        select:hover {
+            background-color: #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sélection déroulante -->
+    <select id="mySelect">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <script>
+        // Récupérer la référence de la sélection déroulante
+        const select = document.getElementById("mySelect");
+
+        // Ajouter un écouteur d'événements pour détecter les changements de sélection
+        select.addEventListener("change", function() {
+          const selectedOption = select.value;
+          alert("Option sélectionnée : " + selectedOption);
+        });
+    </script>
+</body>
+</html>
